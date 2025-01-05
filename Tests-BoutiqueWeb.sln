@@ -5,10 +5,6 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoutiqueWeb", "BoutiqueWeb\BoutiqueWeb.csproj", "{E83D337A-6966-4363-902E-390058B19470}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BoutiqueWeb.UniTests", "BoutiqueWeb.UniTests", "{80E39268-BA0F-406E-84A2-CA14714C19B1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoutiqueWeb.UniTests", "BoutiqueWeb.UniTests\BoutiqueWeb.UniTests\BoutiqueWeb.UniTests.csproj", "{6D88E3ED-BE8C-4FDF-B692-8B6AFAAA762C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,16 +15,9 @@ Global
 		{E83D337A-6966-4363-902E-390058B19470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E83D337A-6966-4363-902E-390058B19470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E83D337A-6966-4363-902E-390058B19470}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D88E3ED-BE8C-4FDF-B692-8B6AFAAA762C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D88E3ED-BE8C-4FDF-B692-8B6AFAAA762C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D88E3ED-BE8C-4FDF-B692-8B6AFAAA762C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D88E3ED-BE8C-4FDF-B692-8B6AFAAA762C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6D88E3ED-BE8C-4FDF-B692-8B6AFAAA762C} = {80E39268-BA0F-406E-84A2-CA14714C19B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {636181FF-E3B6-4896-ACE6-377AE5F5645C}
