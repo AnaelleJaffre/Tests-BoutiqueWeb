@@ -8,12 +8,12 @@ public class ProduitDTO
     public string Type { get; set; } = null!;
 
     public ProduitDTO() { }
-    
-    public ProduitDTO(Produit produit) {
+
+    public ProduitDTO(Produit produit)
+    {
         Id = produit.Id;
         Nom = produit.Nom;
         Prix = produit.Prix;
         Type = produit.Type.ToString();
     }
-
 }

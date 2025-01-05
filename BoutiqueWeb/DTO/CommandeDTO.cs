@@ -7,15 +7,15 @@ public class CommandeDTO
     public int Produit_id { get; set; }
     public int Quantite { get; set; }
     public DateOnly Date { get; set; }
-    
+
     public CommandeDTO() { }
 
-    public CommandeDTO(Commande commande) {
+    public CommandeDTO(Commande commande)
+    {
         Id = commande.Id;
         Client_id = commande.ClientId;
         Produit_id = commande.ProduitId;
         Quantite = commande.Quantite;
         Date = commande.Date;
     }
-
 }

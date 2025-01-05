@@ -2,5 +2,7 @@ namespace BoutiqueWeb.Models;
 
 public enum ProduitType
 {
-    Mobilier, Bureautique, Electronique
+    Mobilier,
+    Bureautique,
+    Electronique,
 }

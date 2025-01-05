@@ -1,7 +1,7 @@
+using BoutiqueWeb.Data;
+using BoutiqueWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BoutiqueWeb.Models;
-using BoutiqueWeb.Data;
 
 namespace ApiClient.Controllers;
 

@@ -1,11 +1,10 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BoutiqueWeb.Models;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [TestClass]
 public class ClientTests
 {
-    
     [TestMethod]
     // On vérifie que les informations du client ont été remplies correctement.
     public void Client_ShouldBeCorrectlyInitialized()
@@ -16,7 +15,7 @@ public class ClientTests
             Id = 1,
             Nom = "De la Vérité",
             Prenom = "Ange",
-            Adresse = "11 rue de la Vérité la Vraie"
+            Adresse = "11 rue de la Vérité la Vraie",
         };
 
         // Assert
@@ -36,7 +35,7 @@ public class ClientTests
             Id = 5,
             Nom = "Fraichit",
             Prenom = "Sarah",
-            Adresse = "3 Avenue des Grands Glaciers"
+            Adresse = "3 Avenue des Grands Glaciers",
         };
 
         // Act
@@ -55,11 +54,21 @@ public class ClientTests
         {
             Id = 1,
             Nom = "Disoir",
-            Prenom = "Alain"
+            Prenom = "Alain",
         };
 
-        var produit1 = new Produit { Id = 1, Nom = "Lampe Ionisee", Prix = 12 };
-        var produit2 = new Produit { Id = 2, Nom = "Acer Nitro V 120Go 16GH", Prix = 1299 };
+        var produit1 = new Produit
+        {
+            Id = 1,
+            Nom = "Lampe Ionisee",
+            Prix = 12,
+        };
+        var produit2 = new Produit
+        {
+            Id = 2,
+            Nom = "Acer Nitro V 120Go 16GH",
+            Prix = 1299,
+        };
 
         var commande1 = new Commande
         {
@@ -67,7 +76,7 @@ public class ClientTests
             ProduitId = produit1.Id,
             Quantite = 3, // Ici on en prend 3
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-17)),
-            Produit = produit1
+            Produit = produit1,
         };
 
         var commande2 = new Commande
@@ -76,7 +85,7 @@ public class ClientTests
             ProduitId = produit2.Id,
             Quantite = 1, // Et là 1 seul (les PC ça coûte cher)
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-7)),
-            Produit = produit2
+            Produit = produit2,
         };
 
         client.ListeCommandes.Add(commande1);
@@ -86,7 +95,6 @@ public class ClientTests
         decimal total = client.CalculerTotalDepense();
 
         // Assert
-        total.Should().Be(3*12 + 1*1299);
+        total.Should().Be(3 * 12 + 1 * 1299);
     }
-
 }

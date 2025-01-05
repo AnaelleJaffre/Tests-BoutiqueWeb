@@ -6,11 +6,12 @@ public class Client
     public string Nom { get; set; } = null!;
     public string Prenom { get; set; } = null!;
     public string Adresse { get; set; } = null!;
-    public List<Commande> ListeCommandes { get; set; } = new List<Commande>(); 
+    public List<Commande> ListeCommandes { get; set; } = new List<Commande>();
 
     public Client() { }
 
-    public Client(ClientDTO clientDTO) {
+    public Client(ClientDTO clientDTO)
+    {
         Id = clientDTO.Id;
         Nom = clientDTO.Nom;
         Prenom = clientDTO.Prenom;
@@ -21,12 +22,12 @@ public class Client
     public decimal CalculerTotalDepense()
     {
         decimal total = 0;
-        
-        foreach(Commande commande in ListeCommandes) {
+
+        foreach (Commande commande in ListeCommandes)
+        {
             total += commande.CalculerPrixTotal();
         }
-        
+
         return total;
     }
-
 }

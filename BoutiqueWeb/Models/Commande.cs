@@ -14,7 +14,8 @@ public class Commande
 
     public Commande() { }
 
-    public Commande(CommandeDTO commandeDTO) {
+    public Commande(CommandeDTO commandeDTO)
+    {
         Id = commandeDTO.Id;
         ClientId = commandeDTO.Client_id;
         ProduitId = commandeDTO.Produit_id;
@@ -27,5 +28,4 @@ public class Commande
     {
         return Produit.Prix * Quantite;
     }
-    
 }

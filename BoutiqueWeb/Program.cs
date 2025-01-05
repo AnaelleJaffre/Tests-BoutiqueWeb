@@ -1,4 +1,5 @@
 using BoutiqueWeb.Data;
+
 SeedData.Init();
 
 var builder = WebApplication.CreateBuilder(args);

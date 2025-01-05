@@ -1,7 +1,7 @@
+using BoutiqueWeb.Data;
+using BoutiqueWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BoutiqueWeb.Models;
-using BoutiqueWeb.Data;
 
 namespace ApiProduit.Controllers;
 
@@ -49,7 +49,11 @@ public class ProduitController : ControllerBase
         _context.Produits.Add(produit);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetProduit), new { id = produit.Id }, new ProduitDTO(produit));
+        return CreatedAtAction(
+            nameof(GetProduit),
+            new { id = produit.Id },
+            new ProduitDTO(produit)
+        );
     }
 
     // PUT: api/produit/2

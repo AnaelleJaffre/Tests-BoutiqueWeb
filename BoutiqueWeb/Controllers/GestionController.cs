@@ -1,7 +1,7 @@
+using BoutiqueWeb.Data;
+using BoutiqueWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BoutiqueWeb.Models;
-using BoutiqueWeb.Data;
 
 namespace ApiGestion.Controllers;
 
@@ -27,12 +27,11 @@ public class GestionController : ControllerBase
         foreach (var c in clients)
         {
             // c.ListeCommandes = _context.Commandes;
-
         }
         return await clients.ToListAsync();
     }
 
-    // // GET: api/client/2 -> pas utiliser ici mais potentiellement utile 
+    // // GET: api/client/2 -> pas utiliser ici mais potentiellement utile
     // [HttpGet("{id}")]
     // public async Task<ActionResult<ProduitDTO>> GetProduit(int id)
     // {

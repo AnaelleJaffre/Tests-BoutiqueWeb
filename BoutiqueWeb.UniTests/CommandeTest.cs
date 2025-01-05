@@ -1,11 +1,10 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BoutiqueWeb.Models;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [TestClass]
 public class CommandeTests
 {
-
     [TestMethod]
     // Changement de la quantité de produits d'une commande
     public void Commande_ShouldBeUpdatedCorrectly()
@@ -16,7 +15,7 @@ public class CommandeTests
             Id = 2,
             Nom = "Smartphone",
             Prix = 800,
-            Type = ProduitType.Electronique
+            Type = ProduitType.Electronique,
         };
 
         var commande = new Commande
@@ -26,15 +25,13 @@ public class CommandeTests
             ProduitId = 2,
             Quantite = 4,
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-78)),
-            Produit = produit
+            Produit = produit,
         };
 
         // Act
         decimal total = commande.CalculerPrixTotal();
 
         // Assert
-        total.Should().Be(800*4);
+        total.Should().Be(800 * 4);
     }
-
-
 }

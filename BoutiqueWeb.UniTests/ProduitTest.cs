@@ -1,11 +1,10 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BoutiqueWeb.Models;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 [TestClass]
 public class ProduitTests
 {
-
     [TestMethod]
     // Mise à jour d'un produit
     public void Produit_DevraitSeMettreAJourCorrectement()
@@ -16,7 +15,7 @@ public class ProduitTests
             Id = 1,
             Nom = "Laser",
             Prix = 125,
-            Type = ProduitType.Mobilier
+            Type = ProduitType.Mobilier,
         };
 
         // Act
@@ -37,14 +36,32 @@ public class ProduitTests
             Id = 1,
             Nom = "Lampe Ionisee",
             Prix = 12,
-            Type = ProduitType.Bureautique
+            Type = ProduitType.Bureautique,
         };
 
         var commandes = new List<Commande>
         {
-            new Commande { ProduitId = 1, ClientId = 1, Quantite = 2, Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-87)), },
-            new Commande { ProduitId = 1, ClientId = 2, Quantite = 3, Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-17)), },
-            new Commande { ProduitId = 2, ClientId = 3, Quantite = 1, Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-457)), }
+            new Commande
+            {
+                ProduitId = 1,
+                ClientId = 1,
+                Quantite = 2,
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-87)),
+            },
+            new Commande
+            {
+                ProduitId = 1,
+                ClientId = 2,
+                Quantite = 3,
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-17)),
+            },
+            new Commande
+            {
+                ProduitId = 2,
+                ClientId = 3,
+                Quantite = 1,
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-457)),
+            },
         };
 
         // Act
@@ -53,7 +70,4 @@ public class ProduitTests
         // Assert
         nombreClients.Should().Be(2); // 2 clients ont acheté le produit n°1
     }
-
-
-
 }

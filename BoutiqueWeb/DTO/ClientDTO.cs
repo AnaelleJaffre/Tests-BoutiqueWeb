@@ -8,12 +8,12 @@ public class ClientDTO
     public string Adresse { get; set; } = null!;
 
     public ClientDTO() { }
-    
-    public ClientDTO(Client client) {
+
+    public ClientDTO(Client client)
+    {
         Id = client.Id;
         Nom = client.Nom;
         Prenom = client.Prenom;
         Adresse = client.Adresse;
     }
-
 }

@@ -1,7 +1,7 @@
+using BoutiqueWeb.Data;
+using BoutiqueWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BoutiqueWeb.Models;
-using BoutiqueWeb.Data;
 
 namespace ApiCommande.Controllers;
 
@@ -24,7 +24,6 @@ public class CommandeController : ControllerBase
         var commandes = _context.Commandes.Select(x => new CommandeDTO(x));
         return await commandes.ToListAsync();
     }
-
 
     // GET: api/commande/2
     [HttpGet("{id}")]
@@ -50,7 +49,11 @@ public class CommandeController : ControllerBase
         _context.Commandes.Add(commande);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(GetCommande), new { id = commande.Id }, new CommandeDTO(commande));
+        return CreatedAtAction(
+            nameof(GetCommande),
+            new { id = commande.Id },
+            new CommandeDTO(commande)
+        );
     }
 
     // PUT: api/commande/2
