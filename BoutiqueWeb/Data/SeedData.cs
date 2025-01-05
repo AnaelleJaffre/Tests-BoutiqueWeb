@@ -47,28 +47,28 @@ public static class SeedData
                 Client = clients[0], // Jean Dupont
                 Produit = produits[0], // Ordinateur Portable
                 Quantite = 1,
-                Date = DateTime.Now.AddDays(-10).ToString("yyyy-MM-dd")
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-15))
             },
             new Commande
             {
                 Client = clients[1], // Marie Martin
                 Produit = produits[3], // Chaise ergonomique
                 Quantite = 2,
-                Date = DateTime.Now.AddDays(-5).ToString("yyyy-MM-dd")
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-17))
             },
             new Commande
             {
                 Client = clients[2], // Luc Durand
                 Produit = produits[5], // Scanner
                 Quantite = 1,
-                Date = DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd")
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-7))
             },
             new Commande
             {
                 Client = clients[2], // Luc Durand
                 Produit = produits[6], // Laser MegaJoule
                 Quantite = 1,
-                Date = DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd")
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(-14))
             }
         };
 

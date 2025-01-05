@@ -8,7 +8,7 @@ public class Commande
     public int ClientId { get; set; }
     public int ProduitId { get; set; }
     public int Quantite { get; set; }
-    public string Date { get; set; } = null!;
+    public DateOnly Date { get; set; }
     public Client Client { get; set; } = null!;
     public Produit Produit { get; set; } = null!;
 
@@ -21,4 +21,11 @@ public class Commande
         Quantite = commandeDTO.Quantite;
         Date = commandeDTO.Date;
     }
+
+    // [Tests] Calcul du prix total
+    public decimal CalculerPrixTotal()
+    {
+        return Produit.Prix * Quantite;
+    }
+    
 }

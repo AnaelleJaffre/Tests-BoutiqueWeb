@@ -6,8 +6,8 @@ public class CommandeDTO
     public int Client_id { get; set; }
     public int Produit_id { get; set; }
     public int Quantite { get; set; }
-    public string Date { get; set; } = null!;
-
+    public DateOnly Date { get; set; }
+    
     public CommandeDTO() { }
 
     public CommandeDTO(Commande commande) {

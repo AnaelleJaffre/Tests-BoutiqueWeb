@@ -15,4 +15,16 @@ public class Produit
         Prix = produitDTO.Prix;
         Type = (ProduitType) Enum.Parse(typeof(ProduitType), produitDTO.Type, true);    
     }
+
+    // [Tests] Calcul du nombre de clients ayant acheté un même produit
+    public int CalculerNombreClients(List<Commande> commandes)
+    {
+        var clientsAcheteurs = commandes
+            .Where(c => c.ProduitId == this.Id) // Filtrer les commandes par produit
+            .Select(c => c.ClientId) // Extraire les identifiants des clients
+            .Distinct() // Garder seulement les clients uniques
+            .Count(); // Compter le nombre de clients
+
+        return clientsAcheteurs;
+    }
 }
