@@ -7,7 +7,7 @@ public class ClientTests
 {
     [TestMethod]
     // On vérifie que les informations du client ont été remplies correctement.
-    public void Client_ShouldBeCorrectlyInitialized()
+    public void Client_DevraitEtreCorrectementInitialise()
     {
         // Arrange
         var client = new Client
@@ -27,7 +27,7 @@ public class ClientTests
 
     [TestMethod]
     // Test de mise à jour des données du client
-    public void CLient_ShouldBeCorrectlyUpdated()
+    public void CLient_DevraitSeMettreAJour()
     {
         // Arrange
         var client = new Client
@@ -47,7 +47,7 @@ public class ClientTests
 
     [TestMethod]
     // On tente de calculer combien un client a dépensé, en tout, sur la Boutique Web.
-    public void Client_TotalSpentOnTheAppShouldCorrespond()
+    public void Client_TotalDepenseSurLApp()
     {
         // Arrange
         var client = new Client

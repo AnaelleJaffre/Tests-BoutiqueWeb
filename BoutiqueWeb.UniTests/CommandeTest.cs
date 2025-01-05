@@ -7,7 +7,7 @@ public class CommandeTests
 {
     [TestMethod]
     // Changement de la quantité de produits d'une commande
-    public void Commande_ShouldBeUpdatedCorrectly()
+    public void Commande_CalculDuPrixTotal()
     {
         // Arrange
         var produit = new Produit
